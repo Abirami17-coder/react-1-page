@@ -1,207 +1,188 @@
-/* Navbar container */
-.navbar {
-  background-color: #2bb4e6;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-/* Navbar links */
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-/* Hover effect for links */
-.navbar a:hover {
-  background-color: #575757;
-  border-radius: 4px;
-}
-
-/* Active link */
-.navbar a.active {
-  background-color: #007bff;
-  border-radius: 4px;
-}
-
-/* Navbar list */
-.navbar ul {
-  list-style-type: none;
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #eef2f7; /* Light blue-gray background */
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
-/* Navbar list items */
-.navbar li {
-  margin: 0;
-}
-.body-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  background-color: #f8f9fa;
-  color: #333;
+/* Form Container */
+form {
+  background-color: #ffffff; /* White background */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  padding: 30px; /* Increased padding for better spacing */
+  margin: 30px auto;
+  max-width: 700px; /* Wider form for better readability */
 }
 
-.body-content {
-  max-width: 50%;
-  text-align: left;
-}
-
-.body-content h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-}
-
-.body-content p {
-  font-size: 1.2rem;
-  margin: 1rem 0;
-}
-
-.body-buttons {
-  margin-top: 1.5rem;
-}
-
-.body-buttons .btn {
-  text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  margin: 0 0.5rem;
-  border-radius: 4px;
-  color: white;
-  background-color: #007bff;
-  transition: background-color 0.3s ease;
-}
-
-.body-buttons .btn:hover {
-  background-color: #0056b3;
-} 
-
-.body-buttons .btn-secondary {
-  background-color: #6c757d;
-}
-
-.body-buttons .btn-secondary:hover {
-  background-color: #5a6268;
-}
-
-.body-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.product-container {
-  padding: 2rem;
-  background-color: #f8f9fa;
-  color: #333;
-  text-align: center;
-}
-
-.product-container h2 {
-  font-size: 2rem;
-  color: #2c3e50;
-  margin-bottom: 1.5rem;
-}
-
-.product-list {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.product-card {
-  background: rgb(233, 221, 221);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  max-width: 300px;
-  text-align: left;
-}
-
-.product-card h3 {
-  font-size: 1.5rem;
-  color: #031a32;
-  margin-bottom: 0.5rem;
-}
-
-.product-card p {
-  margin: 0.5rem 0;
-}
-
-.product-price {
+/* Form Heading */
+h2 {
+  font-size: 28px; /* Larger heading */
   font-weight: bold;
-  color: #28a745;
+  color: #2c3e50; /* Darker text */
+  text-align: center;
+  margin-bottom: 25px;
 }
-.footer {
-  background-color: #333;
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: #34495e; /* Dark gray text */
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px; /* Increased padding for better usability */
+  margin-bottom: 15px; /* More spacing between fields */
+  border: 1px solid #dcdfe6; /* Softer border color */
+  border-radius: 6px; /* Slightly more rounded corners */
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+  border-radius: 8px; /* Slightly more rounded corners */
+}
+
+/* Input Focus */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #3498db; /* Light blue border on focus */
+  outline: none;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Subtle blue glow */
+}
+
+/* Error Messages */
+.text-red-500 {
+  color: #e74c3c; /* Bright red for errors */
+  font-size: 13px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+/* File Upload */
+input[type="file"] {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+}
+
+/* Submit Button */
+button {
+  background-color: #3498db; /* Light blue */
   color: white;
-  padding: 2rem 1rem;
+  border: none;
+  padding: 12px 25px; /* Larger button */
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* Gender Button Styles */
+button[type="button"] {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+  background-color: #3498db; /* Light blue */
+  color: white;
+  border-color: #3498db;
+}
+
+.gender-button {
+  padding: 10px 20px;
+  border: 2px solid #dcdfe6;
+  border-radius: 50px; /* Fully rounded buttons */
+  background-color: white;
+  color: #34495e; /* Dark gray text */
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gender-button:hover {
+  background-color: #f0f8ff; /* Light blue background on hover */
+  border-color: #3498db; /* Blue border on hover */
+}
+
+.gender-selected {
+  background-color: #3498db; /* Blue background for selected */
+  color: white; /* White text for selected */
+  border-color: #3498db; /* Blue border for selected */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  button {
+    width: 100%; /* Full-width button on smaller screens */
+  }
+}
+
+/* Grid Layout for Multi-Column Fields */
+.grid {
+  display: grid;
+  gap: 20px; /* Spacing between grid items */
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr); /* Three columns for City, State, Pin Code */
+}
+
+/* Utility Classes */
+.text-center {
   text-align: center;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.mt-4 {
+  margin-top: 16px;
 }
 
-.footer-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
+.mb-4 {
+  margin-bottom: 16px;
 }
 
-.footer-col {
-  flex: 1;
-  min-width: 250px;
+.p-2 {
+  padding: 8px;
 }
 
-.footer-col h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #f39c12;
-}
-
-.footer-col p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.footer-links,
-.social-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li,
-.social-links li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-links a,
-.social-links a {
-  color: #c3d0dd;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover,
-.social-links a:hover {
-  color: #a6bdd6;
-}
-
-.footer-bottom {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  border-top: 1px solid #444;
-  padding-top: 1rem;
+.p-4 {
+  padding: 16px;
 }
